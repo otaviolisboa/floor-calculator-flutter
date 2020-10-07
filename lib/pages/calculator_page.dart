@@ -4,6 +4,8 @@ import 'package:floor_calculator/helpers/validator_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../helpers/validator_helper.dart';
+
 class CalculatorPage extends StatefulWidget {
   @override
   _CalculatorPageState createState() => _CalculatorPageState();
@@ -18,6 +20,15 @@ class _CalculatorPageState extends State<CalculatorPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Calculadora de pisos'),
+        actions: [
+          IconButton(
+              icon: Icon(
+                Icons.clear_all,
+                color: Colors.white,
+              ),
+              tooltip: "Limpa tuuuuuuutoooo",
+              onPressed: _clearFields)
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -57,6 +68,12 @@ class _CalculatorPageState extends State<CalculatorPage> {
             'Comprimento (centímetros)',
             onSaved: _controller.setFloorLength,
           ),
+          _buildVerticalSpace(),
+          _buildHeaderText('Preço do Piso (Inclui rodapés)'),
+          _buildVerticalSpace(),
+          _buildNumberInputField('Preço (R\$/m²)',
+              onSaved: _controller.setPricePerSqMeter,
+              validator: ValidatorHelper.isNegativeOrZero),
           _buildVerticalSpace(height: 40),
           _buildCalculateButton(),
         ],
@@ -64,14 +81,20 @@ class _CalculatorPageState extends State<CalculatorPage> {
     );
   }
 
-  _buildNumberInputField(String label, {Function(String) onSaved}) {
+  _clearFields() {
+    setState(() {
+      _formKey.currentState.reset();
+    });
+  }
+  _buildNumberInputField(String label,
+      {Function(String) onSaved, Function(String) validator}) {
     return TextFormField(
       onSaved: onSaved,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         labelText: label,
       ),
-      validator: ValidatorHelper.isValidText,
+      validator: validator ?? ValidatorHelper.isValidText,
       keyboardType: TextInputType.number,
     );
   }
