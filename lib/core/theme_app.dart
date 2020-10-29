@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 final themeApp = ThemeData(
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  brightness: Brightness.light,
-  primarySwatch: Colors.deepOrange,
-  accentColor: Colors.deepOrangeAccent,
+  primarySwatch: Colors.red,
   buttonTheme: ButtonThemeData(
     height: 52,
     textTheme: ButtonTextTheme.primary,

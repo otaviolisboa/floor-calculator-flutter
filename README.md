@@ -1,30 +1,30 @@
-# Calculadora de pisos e revestimentos
+# Tic Tac Toe
 
-Aplicativo de uma calculadora de pisos e revestimentos criado para disciplina de Programação Mobile, criado por Kleber de Oliveira Andrade. Desafios concluidos por otavio lisboa.
+Jogo da velha (Tic Tac Toe) criado para disciplina de Programação Mobile, criado por Kleber de Oliveira Andrade
 
-Tutorial de criação deste app: [clique aqui](https://medium.com/@kleberandrade/criando-um-aplicativo-em-flutter-para-calcular-a-quantidade-de-pisos-por-m%C2%B2-dac30b5b5027)
+Tutorial de criação deste app: [clique aqui](https://medium.com/@kleberandrade/criando-um-jogo-da-velha-em-flutter-50347537c926)
 
 <p align="center">
-    <img src="https://cdn-images-1.medium.com/max/400/1*-bDQqIcOqyc5-4qvQLBODQ.png" width="250"/>
-    <img src="https://cdn-images-1.medium.com/max/400/1*AcNqHgMroIwf2y7XAZHoGQ.png" width="250"/>
-    <img src="https://cdn-images-1.medium.com/max/400/1*B8I5SuZlGanHB8POBmBIZA.png" width="250"/>
+    <img src="https://miro.medium.com/max/334/1*mEhyVlhIPQ3ccv9piPEdrw.png" width="250"/>
+    <img src="https://miro.medium.com/max/334/1*mqMhhPAmNoY_ch1AAvJgeg.png" width="250"/>
+    <img src="https://miro.medium.com/max/334/1*IXXSxfLfRDKCXw_QKw5yvQ.png" width="250"/>
 </p>
 
 ## Como clonar o projeto
 
 *   Faça um fork do projeto (precisa ter uma conta no github)
 *   Abra o terminal do Visual Studio Code
-*   Acesse a pasta onde deseja salvar o aplicativo e digite: git clone *link_do_projeto_no_seu_github* **floor_calculator**
+*   Acesse a pasta onde deseja salvar o aplicativo e digite: git clone *link_do_projeto_no_seu_github* **tictactoe**
 *   Clique em File --> Open e abra o projeto
 *   Não se esqueça de abrir o arquivo *pubspec.yaml* e salvar (CTRL + S) o arquivo para que os plugins sejam baixados 
 
 ## Desafio para aula
 
-*   [x] Adicionar um novo atributo (price) na classe FloorModel e um novo campo numérico no CalculatorPage para o usuário digitar o preço;
-*   [x] Criar uma função para calcular o preço na classe Controller e exibir o resultado no ResultDialog;
-*   [x] Validar os campos de entrada para quando o usuário digitar valores negativos ou zero;
-*   [x] Criar uma função para limpar (zerar) os campos do formulário;
-*   [x] Criar um ícone para o aplicativo ([plugin flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons), [gerador de ícone](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html). Exemplo de como inserir imagens no flutter, [clique aqui](https://medium.com/@suragch/how-to-include-images-in-your-flutter-app-863889fc0b29).
+*   [x] Exibir o jogador da vez (Turno do X ou Turno do Y); Pode usar um Text para isso.
+*   [x] Criar um placar de vitórias para cada jogador; Pode usar Text também
+*   [x] Criar uma splash screen para o aplicativo; Utilize o [plugin custom_splash](https://pub.dev/packages/custom_splash).
+*   [ ] Adicionar um botão para compartilhar o aplicativo. Utilize o [plugin Share](https://pub.dev/packages/share).
+*   [x] Trocar o X e Y por duas imagens (exemplo: Finn e Jake de Adventure Time) — como [utilizar imagens](https://flutter.dev/docs/development/ui/assets-and-images). Entendendo como colocar [imagens em um Container](https://medium.com/flutteropen/flutter-widgets-03-image-558e2b24059e).
 
 ## Licença
 
